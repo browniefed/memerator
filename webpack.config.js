@@ -30,7 +30,11 @@ module.exports = {
         loader: 'babel',
         include: path.join(__dirname, 'app'),
       },
-
+      //Images
+      {
+        test: /\.png?$/,
+        loader: 'url-loader?limit=10000000',
+      },
       // CSS
       {
         test: /\.css$/,
